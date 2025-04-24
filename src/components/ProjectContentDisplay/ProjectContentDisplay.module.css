@@ -1,0 +1,16 @@
+.pdfObject {
+    border: 1px solid #ccc; /* Optional styling */
+    min-height: 600px; /* Ensure minimum height */
+}
+
+.imageContent {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevent extra space below */
+    margin: 1rem auto; /* Center if needed */
+}
+
+.descriptionContent {
+  /* Add any specific description styling */
+  line-height: 1.7;
+}

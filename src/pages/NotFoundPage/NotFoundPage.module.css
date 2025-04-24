@@ -1,3 +1,4 @@
+
 .container {
     padding: 2rem;
   }
@@ -49,14 +50,4 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-  }
-
-  .heroLink {
-    text-decoration: none;
-    display: inline-block; /* Ensure Button inside behaves correctly */
-  }
-  
-  /* Optional: Add margin if the Button component doesn't have it */
-  .heroLink > button {
-    margin-top: 1rem;
   }

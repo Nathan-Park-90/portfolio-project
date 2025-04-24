@@ -1,9 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom'; // Import NavLink
 import { motion } from 'framer-motion';
 import styles from './Navbar.module.css';
 
 function Navbar() {
+  // Function to determine className based on active state
+  const getNavLinkClass = ({ isActive }) => {
+    return `${styles.navLink} ${isActive ? styles.active : ''}`.trim();
+  };
+
   return (
     <motion.nav
       className={styles.navbar}
@@ -13,9 +18,15 @@ function Navbar() {
     >
       <Link to="/" className={styles.logo}>Your Name</Link>
       <ul className={styles.navList}>
-        <motion.li whileHover={{ scale: 1.1 }}><Link to="/about">About</Link></motion.li>
-        <motion.li whileHover={{ scale: 1.1 }}><Link to="/projects">Projects</Link></motion.li>
-        <motion.li whileHover={{ scale: 1.1 }}><Link to="/contact">Contact</Link></motion.li>
+        <motion.li whileHover={{ scale: 1.1 }}>
+          <NavLink to="/about" className={getNavLinkClass}>About</NavLink>
+        </motion.li>
+        <motion.li whileHover={{ scale: 1.1 }}>
+          <NavLink to="/projects" className={getNavLinkClass}>Projects</NavLink>
+        </motion.li>
+        <motion.li whileHover={{ scale: 1.1 }}>
+          <NavLink to="/contact" className={getNavLinkClass}>Contact</NavLink>
+        </motion.li>
       </ul>
     </motion.nav>
   );

@@ -67,7 +67,7 @@ function ContactPage() {
             <h1>Contact Me</h1>
 
             {submitSuccess ? (
-                <p className={styles.successMessage}>Thank you for your message! I'll get back to you soon.</p>
+                <p className={styles.successMessage}>Thank you for your message! I&apos;ll get back to you soon.</p>
             ) : (
                 <form onSubmit={handleSubmit} className={styles.contactForm}>
                     {submitError && <p className={styles.errorMessage}>{submitError}</p>}

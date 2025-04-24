@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams, Navigate } from 'react-router-dom'; // Import Navigate for redirect/handling not found
+import { useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import styles from './ProjectDetailPage.module.css';
 import { projects } from '../../data/projects'; // Import project data
@@ -24,7 +24,7 @@ function ProjectDetailPage() {
         return (
             <div className={styles.notFoundContainer}> {/* Add specific styling */}
                 <h1>Project Not Found</h1>
-                <p>Sorry, we couldn't find the project you were looking for.</p>
+                <p>Sorry, we couldn&apos;t find the project you were looking for.</p>
                 <a href="/projects">Back to Projects</a> {/* Simple link back */}
             </div>
         );

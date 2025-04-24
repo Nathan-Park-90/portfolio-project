@@ -11,8 +11,8 @@ function ProjectContentDisplay({ project }) {
     return (
       <object data={content} type="application/pdf" width="100%" height="600px" className={styles.pdfObject}>
         <p>
-          It appears you don't have a PDF plugin for this browser. You can{' '}
-          <a href={content} download={`${title}.pdf`}> {/* Add download attribute */}
+          It appears you don&apos;t have a PDF plugin for this browser. You can{' '}
+          <a href={content} download={`${title}.pdf`}>
             download the PDF file.
           </a>
         </p>

@@ -13,7 +13,7 @@ function HomePage() {
       // ... animation props ...
     >
       <section className={styles.hero}>
-        <h1 className={styles.title}>Hi, I'm [Your Name]</h1>
+        <h1 className={styles.title}>Hi, I&apos;m [Your Name]</h1>
         <p className={styles.subtitle}>A [Your Major] student passionate about [Your Interests].</p>
         {/* Wrap the Button component within the Link */}
         <Link to="/projects" className={styles.heroLink}> {/* Use a generic class for the Link if needed */}

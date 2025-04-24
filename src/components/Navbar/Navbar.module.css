@@ -1,0 +1,37 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  .navList {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .navList li {
+    /* No specific styles here, as motion.li handles hover */
+  }
+  
+  .navList a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease; /* Add a transition for smooth color change */
+  }
+  
+  .navList a:hover {
+      color: var(--primary-color); /* Change color on hover */
+  }

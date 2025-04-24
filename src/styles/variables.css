@@ -1,0 +1,9 @@
+/* src/styles/variables.css */
+:root {
+    --primary-color: #007bff;
+    --primary-color-dark: #0056b3;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --font-family: 'Open Sans', sans-serif;
+  /* ... more variables ... */
+}

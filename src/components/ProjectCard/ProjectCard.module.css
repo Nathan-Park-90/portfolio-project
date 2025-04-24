@@ -1,0 +1,33 @@
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer; /* Indicate it's clickable */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Add transitions */
+    background-color: white; /* Ensure a background color */
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px; /* Add margin below the image */
+  }
+  
+  .title {
+    margin-top: 0; /* Remove default top margin */
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.4;
+    margin-bottom: 0; /* Remove default bottom margin */
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.5);
+  }

@@ -6,11 +6,36 @@ import { projects } from '../../data/projects';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
 import Button from '../../components/Button/Button'; // Import the Button component
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      ease: "easeOut"
+    }
+  }
+};
+
+const projectVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut"
+    }
+  }
+};
+
 function HomePage() {
   return (
     <motion.div
       className={styles.container}
-      // ... animation props ...
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
     >
       <section className={styles.hero}>
         <h1 className={styles.title}>Hi, I&apos;m [Your Name]</h1>
@@ -25,9 +50,15 @@ function HomePage() {
        <section className={styles.featuredProjects}>
         <h2>Featured Projects</h2>
         <div className={styles.projectGrid}>
-          {projects.slice(0, 3).map((project) => (
-            // Assuming ProjectCard needs an onClick handler now for consistency
-            <ProjectCard key={project.id} project={project} onClick={() => { /* Navigate or open modal */ }} />
+          {projects.slice(0, 3).map((project, index) => (
+            <motion.div
+              key={project.id}
+              variants={projectVariants}
+              transition={{ delay: index * 0.2 }}
+              whileHover={{ y: -5, scale: 1.02, transition: { duration: 0.2 } }}
+            >
+              <ProjectCard project={project} />
+            </motion.div>
           ))}
         </div>
       </section>

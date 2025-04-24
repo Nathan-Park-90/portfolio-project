@@ -1,11 +1,31 @@
 /* src/pages/ContactPage/ContactPage.module.css */
 .container {
-    padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    var(--text-primary) 0%,
+    var(--accent-primary) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .contactForm {
-  max-width: 600px;
-  margin: 0 auto;
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
 }
 
 .formGroup {
@@ -15,29 +35,63 @@
 .formGroup label {
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--text-color);
+  color: var(--text-primary);
+  font-weight: 500;
 }
 
 .inputField,
 .textareaField {
   width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 0.75rem;
+  border: 2px solid var(--input-border);
+  border-radius: var(--radius-md);
+  background-color: var(--input-bg);
+  color: var(--text-primary);
   font-size: 1rem;
-  box-sizing: border-box; /* Include padding and border in width */
+  transition: all var(--transition-normal);
 }
 
 .textareaField {
-  height: 150px;
-  resize: vertical; /* Allow vertical resizing */
+  min-height: 150px;
+  resize: vertical;
+}
+
+.inputField:focus,
+.textareaField:focus {
+  outline: none;
+  border-color: var(--input-focus);
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
 }
 
 .errorMessage {
-  color: red;
-  margin-bottom: 1rem;
+  color: #ff6b6b;
+  background-color: rgba(255, 107, 107, 0.1);
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 107, 107, 0.2);
 }
-.successMessage{
-    color: green;
-    margin-bottom: 1rem;
+
+.successMessage {
+  color: #51cf66;
+  background-color: rgba(81, 207, 102, 0.1);
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  text-align: center;
+  border: 1px solid rgba(81, 207, 102, 0.2);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .contactForm {
+    padding: 1.5rem;
+  }
 }

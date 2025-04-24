@@ -1,62 +1,98 @@
 .container {
-    padding: 2rem;
-  }
-  
-  .hero {
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--bg-primary) 0%,
+    var(--bg-secondary) 100%
+  );
+  border-radius: var(--radius-lg);
+  margin-bottom: 4rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--text-primary) 0%,
+    var(--accent-primary) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.button:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.heroLink {
+  text-decoration: none;
+}
+
+.featuredProjects {
+  padding: 4rem 0;
+}
+
+.featuredProjects h2 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
   .title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--text-color);
-  }
-  
-  .subtitle {
-    font-size: 1.2rem;
-    color: var(--text-color);
-    margin-bottom: 2rem;
-  }
-  
-  .button {
-      background-color: var(--primary-color);
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      font-size: 1rem;
-      text-decoration: none;
-  }
-  
-  .button:hover {
-    background-color: var(--primary-color-dark);
-  }
-  
-  .featuredProjects {
-    margin-bottom: 3rem;
-  }
-  
-  .featuredProjects h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--text-color);
-  }
-  
-  .projectGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    font-size: 2.5rem;
   }
 
-  .heroLink {
-    text-decoration: none;
-    display: inline-block; /* Ensure Button inside behaves correctly */
+  .subtitle {
+    font-size: 1.25rem;
   }
-  
-  /* Optional: Add margin if the Button component doesn't have it */
-  .heroLink > button {
-    margin-top: 1rem;
+
+  .hero {
+    min-height: 60vh;
+    padding: 2rem 1rem;
   }
+}

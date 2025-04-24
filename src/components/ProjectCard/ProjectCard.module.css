@@ -1,33 +1,55 @@
 .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    cursor: pointer; /* Indicate it's clickable */
-    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Add transitions */
-    background-color: white; /* Ensure a background color */
-  }
-  
-  .image {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 10px; /* Add margin below the image */
-  }
-  
-  .title {
-    margin-top: 0; /* Remove default top margin */
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--text-color);
-  }
-  
-  .description {
-    font-size: 1rem;
-    color: var(--text-color);
-    line-height: 1.4;
-    margin-bottom: 0; /* Remove default bottom margin */
-  }
-  
-  .card:hover {
-    box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.5);
-  }
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: box-shadow var(--transition-normal), border-color var(--transition-normal);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-hover);
+}
+
+.title {
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.6;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.tech {
+  background-color: var(--bg-tertiary);
+  color: var(--text-primary);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+}

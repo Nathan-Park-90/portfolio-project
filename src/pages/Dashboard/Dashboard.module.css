@@ -1,0 +1,365 @@
+.dashboard {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoutButton {
+  padding: 0.5rem 1rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.logoutButton:hover {
+  background-color: #c82333;
+}
+
+.dashboardTabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 1rem;
+}
+
+.tabButton {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4a5568;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.tabButton:hover {
+  color: #2d3748;
+}
+
+.tabButton.active {
+  color: #3182ce;
+  border-bottom: 2px solid #3182ce;
+}
+
+.contentSection {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.contentSection h2 {
+  margin-bottom: 1.5rem;
+  color: #2d3748;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .dashboard {
+    background-color: #1a202c;
+    color: #e2e8f0;
+  }
+
+  .contentSection {
+    background-color: #2d3748;
+  }
+
+  .tabButton {
+    color: #a0aec0;
+  }
+
+  .tabButton:hover {
+    color: #e2e8f0;
+  }
+
+  .tabButton.active {
+    color: #63b3ed;
+    border-bottom-color: #63b3ed;
+  }
+
+  .projectCard {
+    background-color: #2d3748;
+  }
+
+  .projectInfo h3 {
+    color: #e2e8f0;
+  }
+
+  .projectInfo p {
+    color: #a0aec0;
+  }
+
+  .emptyState {
+    color: #a0aec0;
+  }
+}
+
+.projectForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: #3182ce;
+}
+
+.formGroup textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.techInput {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.techInput input {
+  flex: 1;
+}
+
+.techInput button {
+  padding: 0.5rem 1rem;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.techInput button:hover {
+  background-color: #2c5282;
+}
+
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.techTag {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.75rem;
+  background-color: #e2e8f0;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+
+.removeTech {
+  background: none;
+  border: none;
+  color: #718096;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.removeTech:hover {
+  color: #e53e3e;
+}
+
+.submitButton {
+  padding: 0.75rem 1.5rem;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  align-self: flex-start;
+}
+
+.submitButton:hover {
+  background-color: #2c5282;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .formGroup label {
+    color: #e2e8f0;
+  }
+
+  .formGroup input,
+  .formGroup textarea {
+    background-color: #4a5568;
+    border-color: #718096;
+    color: #e2e8f0;
+  }
+
+  .formGroup input:focus,
+  .formGroup textarea:focus {
+    border-color: #63b3ed;
+  }
+
+  .techTag {
+    background-color: #4a5568;
+    color: #e2e8f0;
+  }
+
+  .removeTech {
+    color: #a0aec0;
+  }
+
+  .removeTech:hover {
+    color: #fc8181;
+  }
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.addButton {
+  padding: 0.5rem 1rem;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.addButton:hover {
+  background-color: #2c5282;
+}
+
+.projectsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.projectCard {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.projectImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.projectInfo {
+  padding: 1rem;
+}
+
+.projectInfo h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+}
+
+.projectInfo p {
+  margin: 0 0 1rem 0;
+  color: #4a5568;
+}
+
+.projectActions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.editButton {
+  padding: 0.5rem 1rem;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.editButton:hover {
+  background-color: #2c5282;
+}
+
+.deleteButton {
+  padding: 0.5rem 1rem;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.deleteButton:hover {
+  background-color: #c82333;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 2rem;
+  color: #4a5568;
+}
+
+.imagePreview {
+  margin-top: 1rem;
+  max-width: 300px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.imagePreview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .imagePreview {
+    border: 1px solid #4a5568;
+  }
+} 
